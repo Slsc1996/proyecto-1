@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    font-family: "Pacifico", cursive;
+    font-size: 25px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    text-align: center;
+    margin: 0%;
+    background-color: rgba(228, 136, 171, 0.774);
+    color: white;
+    font-size: 30px;
+    padding: 8px;
+    width: 100%;
+}
+
+.branch {
+    display: flex;
+    flex-direction;
+    align-items: center;
+}
+
+.branch h1 {
+    font-size: 80px;
+}
+
+.items ul {
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.items li {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+hr {
+    color: black;
+}
