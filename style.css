@@ -167,3 +167,13 @@ label, .checkbox {
 .button:hover {
     background-color: rgb(233, 151, 192);
 }
+
+.article {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    margin: 0% auto;
+    
+}
+
