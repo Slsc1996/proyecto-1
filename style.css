@@ -4,12 +4,16 @@
 
 body {
     margin: 0;
-    font-family: "Pacifico", cursive;
+    font-family: "Pacifico", cursive !important;
     font-size: 25px;
     display: block;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
+
+/*header*/
 
 .header {
     display: flex;
@@ -46,9 +50,9 @@ body {
     margin-left: 50px;
 }
 
-a {
+.header ul li a {
     text-decoration: none;
-    color: black;
+    color: black !important;
 }
 
 .items li {
@@ -57,12 +61,27 @@ a {
     margin-right: 10px;
 }
 
+.header ul li a:hover{
+    color: rgb(233, 108, 156) !important;
+    padding: 5px;
+}
+
+
 hr {
     border: 1px solid rgb(236, 236, 236);
 }
 
+/*header*/
+
+
+/*productos*/
 .main {
     width: 100%;
+    margin-bottom: -20px;
+}
+
+.logo figure img {
+    background-color: white;
 }
 
 .logo img {
@@ -78,22 +97,52 @@ hr {
     text-align: center;
 }
 
-.productos img {
-    margin-left: 35px;
+.makeup {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: pink;
 }
 
-.cuidado-piel img {
-    margin-left: 35px;
+.card {
+    margin-right: 20px;
 }
 
+.makeup .card a {
+    color: rgb(253, 253, 253);
+    background-color: rgb(241, 143, 197);
+    border: 1px solid rgba(228, 136, 171, 0.774);
+}
+
+.makeup .card a:hover {
+    padding: 5px;
+}
+
+.skin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color: pink;
+    padding: 20px;
+}
+
+.skin p {
+    text-align: center;
+}
+
+/*productos*/
+
+
+/*footer*/
 .footer {
     background-color: rgba(228, 136, 171, 0.774);
     height: 200px;
-    margin-top: 0px;
 }
 
 .footer h1 {
     text-align: center;
+    padding: 25px;
     color: rgb(243, 107, 152);
 }
 
@@ -109,71 +158,213 @@ hr {
 
 .footer i {
     color: rgb(248, 220, 244);
+    font-size: 20px;
+    margin: 0 auto;
 }
 
-.main {
-    font-family: 'Roboto', sans-serif;
-    background-color: blanchedalmond;
-    padding: 50px;
-    height: 500px;
-}
-
-.main form h1{
-    text-align: center;
-}
-
-.main form p {
-    text-align: center;
-    font-size: 15px;
-}
-
-.main form {
-    background-color: white;
-    padding: 20px;
-    width: 30%;
-    margin: 0% auto;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.main input {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.footer i:hover {
+    color: rgb(233, 108, 156);
     padding: 5px;
-    height: 35px;
-    border: none;
-    margin-bottom: 8px;
+    font-size: 20px;
 }
 
-label, .checkbox {
-    display: inline-flex;
-    font-size: 10px;
+/*footer*/
+
+/*responsive*/
+
+@media (min-width: 576px) {
+    body {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 20px;
+    }
+
+    .branch h1 {
+        font-size: 40px;
+    }
+
+    .items ul {
+        margin-left: 20px;
+    }
+
+    .makeup,
+    .skin {
+        padding: 10px;
+    }
+
+    .card {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .skin p {
+        text-align: center;
+    }
+
+    .header,
+    .footer,
+    .logo,
+    .skin {
+        width: calc(100% + 20px); 
+        margin-left: -10px; 
+        margin-right: -10px; 
+        box-sizing: border-box;
+    }
+
+    .makeup,
+    .skin {
+        margin-left: -10px; 
+        margin-right: -10px; 
+    }
+
+    .header,
+    .footer {
+        padding: 0;
+    }
 }
 
-.main .checkbox {
-    height: 20px;
+@media (min-width: 768px) {
+    .header p {
+        font-size: 24px;
+    }
+
+    .branch h1 {
+        font-size: 60px;
+    }
+
+    .items ul {
+        margin-left: 40px;
+    }
 }
 
-.main .button {
-    background-color: darksalmon;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    border: none;
+
+@media (min-width: 992px) {
+    .header p {
+        font-size: 28px;
+    }
+
+    .branch h1 {
+        font-size: 80px;
+    }
+
+    .items ul {
+        margin-left: 50px;
+    }
 }
 
-.button:hover {
-    background-color: rgb(233, 151, 192);
+
+@media (min-width: 1200px) {
+    .header p {
+        font-size: 32px;
+    }
+
+    .branch h1 {
+        font-size: 100px;
+    }
+
+    .items ul {
+        margin-left: 60px;
+    }
 }
 
-.article {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
+/*******/
+
+/*formulario*/
+
+.title-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+form {
+    margin: 0 auto;
     padding: 50px;
-    margin: 0% auto;
-    
+    background-color: rgba(184, 142, 165, 0.788);
+    width: 30%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: white;
 }
+
+#button {
+    background-color: rgb(233, 156, 187);
+    border: 1px solid pink;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#button:hover {
+    padding: 5px;
+    font-size: 20px;
+}
+
+@media (min-width: 576px) {
+    form {
+        width: 70%;
+        margin-bottom: 180px;
+    }
+}
+
+@media (min-width: 768px) {
+    form {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    form {
+        width: 40%;
+    }
+}
+
+/*formulario*/
+
+/*gestión de perfil*/
+
+.perfil {
+    display: flex;
+    padding: 35px;
+}
+
+.perfil-menu {
+    padding-left: 100px;
+}
+
+.perfil-menu ul {
+    border-right: 1px solid rgb(238, 232, 232);
+}
+
+.perfil-menu a {
+    color: black;
+    padding:15px;
+}
+
+.perfil-menu a:hover {
+    background-color: rgb(224, 224, 224);
+    color: black;
+}
+
+.perfil-img {
+    padding-left: 25px;
+}
+
+.perfil-img a:hover {
+    padding: 5px;
+}
+/*gestión de perfil*/
+
 
