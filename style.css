@@ -111,12 +111,56 @@ hr {
 
 .makeup .card a {
     color: rgb(253, 253, 253);
+    padding: 5px;
     background-color: rgb(241, 143, 197);
     border: 1px solid rgba(228, 136, 171, 0.774);
 }
 
 .makeup .card a:hover {
-    padding: 5px;
+    padding: 15px;
+}
+
+.custom-button {
+    color: rgb(253, 253, 253);
+    padding: 15px;
+    background-color: rgb(241, 143, 197);
+    border: 1px solid rgba(228, 136, 171, 0.774);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.custom-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+
+#informacionProducto {
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 25px;
+    font-size: 12px;
+    border-radius: 15px;    
+}
+
+#informacionProducto button {
+    background-color: rgb(0, 105, 217);
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#informacionProducto button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
 }
 
 .skin {
@@ -367,4 +411,25 @@ form {
 }
 /*gestión de perfil*/
 
+
+#mostrarInfo:checked + #informacionProducto {
+    display: block;
+}
+
+#informacionProducto {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+#cantidad {
+    margin-bottom: 10px;
+}
 
